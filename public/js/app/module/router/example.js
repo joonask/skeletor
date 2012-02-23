@@ -9,11 +9,18 @@
         return console.log("An example router initialized");
       },
       index: function() {
-        return new ExampleView();
+        console.log("default route");
+        $("#content .page").hide();
+        if (!(this.exampleView != null)) this.exampleView = new ExampleView();
+        return this.exampleView.$el.show();
       },
       other: function() {
         console.log("other route");
-        return new OtherExampleView();
+        $("#content .page").hide();
+        if (!(this.otherExampleView != null)) {
+          this.otherExampleView = new OtherExampleView();
+        }
+        return this.otherExampleView.$el.show();
       }
     });
   });
