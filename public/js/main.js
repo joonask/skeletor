@@ -2,11 +2,11 @@
   requirejs.config({
     paths: {
       jquery: 'ext/jquery',
-      underscore: 'ext/underscore'
+      underscore: 'ext/underscore-1.3.1.min'
     }
   });
 
-  require(['jquery', 'underscore', 'ext/backbone-optamd3'], function($, _, Backbone) {
+  require(['jquery', 'underscore', 'ext/backbone-0.9.1.amd.min'], function($, _, Backbone) {
     window._ = _;
     window.Backbone = Backbone;
     return require(['app/module/router/example', 'domReady'], function(ExampleRouter, domReady) {
