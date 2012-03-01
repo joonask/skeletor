@@ -1,7 +1,7 @@
 requirejs.config({
   paths:
     jquery: 'ext/jquery'
-    underscore: 'ext/underscore'
+    underscore: 'ext/underscore-1.3.1.min'
 })
 
 # Change the first 'require' to 'define' if you intend to split your
@@ -12,7 +12,7 @@ requirejs.config({
 require [
   'jquery',
   'underscore',
-  'ext/backbone-optamd3'
+  'ext/backbone-0.9.1.amd.min'
 ], ($, _, Backbone) ->
   window._ = _
   window.Backbone = Backbone
