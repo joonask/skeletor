@@ -1,14 +1,15 @@
 requirejs.config({
   paths:
+    backbone: 'ext/backbone-0.9.1.amd.min'
     jquery: 'ext/jquery'
     underscore: 'ext/underscore-1.3.1.min'
 })
 
 require [
-  'jquery',
-  'underscore',
-  'ext/backbone-0.9.1.amd.min'
-], ($, _, Backbone) ->
+  'backbone'
+  'jquery'
+  'underscore'
+], (Backbone, $, _) ->
   window._ = _
   window.Backbone = Backbone
 
