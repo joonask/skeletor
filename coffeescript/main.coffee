@@ -1,19 +1,15 @@
 requirejs.config({
   paths:
-    jquery: 'ext/jquery'
+    backbone: 'ext/backbone-0.9.1.amd.min'
+    jquery: 'ext/jquery-1.7.2.min'
     underscore: 'ext/underscore-1.3.1.min'
 })
 
-# Change the first 'require' to 'define' if you intend to split your
-# application into sub-applications that each first require 'main.js'.
-# (A multi-page app instead of a single-page app.) For eaxmple, you
-# could have main-shopping-cart.js as an entry point, where you:
-# require ['main'], () -> require ['shopping-cart-specific-stuff']
 require [
-  'jquery',
-  'underscore',
-  'ext/backbone-0.9.1.amd.min'
-], ($, _, Backbone) ->
+  'backbone'
+  'jquery'
+  'underscore'
+], (Backbone, $, _) ->
   window._ = _
   window.Backbone = Backbone
 
