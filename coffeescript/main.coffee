@@ -4,11 +4,6 @@ requirejs.config({
     underscore: 'ext/underscore-1.3.1.min'
 })
 
-# Change the first 'require' to 'define' if you intend to split your
-# application into sub-applications that each first require 'main.js'.
-# (A multi-page app instead of a single-page app.) For eaxmple, you
-# could have main-shopping-cart.js as an entry point, where you:
-# require ['main'], () -> require ['shopping-cart-specific-stuff']
 require [
   'jquery',
   'underscore',
