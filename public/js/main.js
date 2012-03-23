@@ -2,7 +2,7 @@
   requirejs.config({
     paths: {
       backbone: 'ext/backbone-0.9.1.amd.min',
-      jquery: 'ext/jquery',
+      jquery: 'ext/jquery-1.7.2.min',
       underscore: 'ext/underscore-1.3.1.min'
     }
   });
