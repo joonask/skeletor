@@ -3,7 +3,8 @@
     return Backbone.Router.extend({
       routes: {
         "": "index",
-        "other": "other"
+        "other": "other",
+        "handlebars": "handlebars"
       },
       initialize: function() {
         return console.log("An example router initialized");
@@ -21,6 +22,19 @@
           this.otherExampleView = new OtherExampleView();
         }
         return this.otherExampleView.$el.show();
+      },
+      handlebars: function() {
+        console.log("handlebars route");
+        if (!(this.handlebarsView != null)) {
+          return require(['app/module/views/handlebarsView'], function(HandlebarsView) {
+            this.handlebarsView = new HandlebarsView();
+            $("#content .page").hide();
+            return this.handlebarsView.$el.show();
+          });
+        } else {
+          $("#content .page").hide();
+          return this.handlebarsView.$el.show();
+        }
       }
     });
   });
