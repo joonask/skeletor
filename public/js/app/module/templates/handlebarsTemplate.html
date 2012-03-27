@@ -1,0 +1,14 @@
+<div>Name: {{ name }} </div>
+
+<h2>People</h2>
+<ul>
+{{#people}}
+    <li>{{name}}</li>
+{{/people}}
+{{^people}}
+    <li>Nobody here :(</li>
+{{/people}}
+</ul>
+
+<p><a href="#">Back to start</a></p>
+<p><a href="#other">to other route/view</a></p>
