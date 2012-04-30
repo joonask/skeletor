@@ -1,6 +1,6 @@
 
-  define(["handlebars", "text!app/module/templates/handlebarsTemplate.html", "app/module/models/exampleModel"], function(Handlebars, Template, ExampleModel) {
-    return Backbone.View.extend({
+  define(["handlebars", "app/module/views/skeletorView", "text!app/module/templates/handlebarsTemplate.html", "app/module/models/exampleModel"], function(Handlebars, SkeletorView, Template, ExampleModel) {
+    return SkeletorView.extend({
       el: "#handlebars-view",
       initialize: function() {
         console.log("init handlebars view");

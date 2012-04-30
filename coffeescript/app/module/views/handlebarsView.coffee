@@ -1,9 +1,10 @@
 define [
   "handlebars" # normally load handlebars in main.coffee
+  "app/module/views/skeletorView"
   "text!app/module/templates/handlebarsTemplate.html"
   "app/module/models/exampleModel"
-], (Handlebars, Template, ExampleModel) ->
-  Backbone.View.extend
+], (Handlebars, SkeletorView, Template, ExampleModel) ->
+  SkeletorView.extend
     el: "#handlebars-view"
 
     initialize: ->

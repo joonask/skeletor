@@ -10,30 +10,23 @@
         return console.log("An example router initialized");
       },
       index: function() {
-        console.log("default route");
-        $("#content .page").hide();
         if (!(this.exampleView != null)) this.exampleView = new ExampleView();
-        return this.exampleView.$el.show();
+        return this.exampleView.show();
       },
       other: function() {
-        console.log("other route");
-        $("#content .page").hide();
         if (!(this.otherExampleView != null)) {
           this.otherExampleView = new OtherExampleView();
         }
-        return this.otherExampleView.$el.show();
+        return this.otherExampleView.show();
       },
       handlebars: function() {
-        console.log("handlebars route");
         if (!(this.handlebarsView != null)) {
           return require(['app/module/views/handlebarsView'], function(HandlebarsView) {
             this.handlebarsView = new HandlebarsView();
-            $("#content .page").hide();
-            return this.handlebarsView.$el.show();
+            return this.handlebarsView.show();
           });
         } else {
-          $("#content .page").hide();
-          return this.handlebarsView.$el.show();
+          return this.handlebarsView.show();
         }
       }
     });
