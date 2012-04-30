@@ -1,13 +1,14 @@
 define [
+  "app/module/views/skeletorView"
   "text!app/module/templates/exampleOtherTemplate.html"
-], (Template) ->
-  Backbone.View.extend
+], (SkeletorView, Template) ->
+  SkeletorView.extend
+    template: _.template(Template)
     el: "#other-view"
 
     initialize: ->
-      console.log "init other view"
-      @template = _.template(Template)
-      @render()
+      console.log 'init other view'
 
-    render: ->
-      @$el.html(@template)
+      # either call 'super' initialize, or provide the same functionality
+      # yourself.
+      SkeletorView.prototype.initialize.call(@)

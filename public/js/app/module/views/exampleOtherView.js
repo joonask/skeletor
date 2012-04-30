@@ -1,14 +1,11 @@
 
-  define(["text!app/module/templates/exampleOtherTemplate.html"], function(Template) {
-    return Backbone.View.extend({
+  define(["app/module/views/skeletorView", "text!app/module/templates/exampleOtherTemplate.html"], function(SkeletorView, Template) {
+    return SkeletorView.extend({
+      template: _.template(Template),
       el: "#other-view",
       initialize: function() {
-        console.log("init other view");
-        this.template = _.template(Template);
-        return this.render();
-      },
-      render: function() {
-        return this.$el.html(this.template);
+        console.log('init other view');
+        return SkeletorView.prototype.initialize.call(this);
       }
     });
   });

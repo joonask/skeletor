@@ -1,10 +1,10 @@
 
-  define(["text!app/module/templates/exampleTemplate.html", "app/module/models/exampleModel"], function(Template, ExampleModel) {
-    return Backbone.View.extend({
+  define(["app/module/views/skeletorView", "text!app/module/templates/exampleTemplate.html", "app/module/models/exampleModel"], function(SkeletorView, Template, ExampleModel) {
+    return SkeletorView.extend({
       el: "#example-view",
+      template: _.template(Template),
       initialize: function() {
         console.log("init example view");
-        this.template = _.template(Template);
         this.model = new ExampleModel({
           name: "Test name"
         });

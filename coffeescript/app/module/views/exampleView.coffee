@@ -1,13 +1,14 @@
 define [
+  "app/module/views/skeletorView"
   "text!app/module/templates/exampleTemplate.html"
   "app/module/models/exampleModel"
-], (Template, ExampleModel) ->
-  Backbone.View.extend
+], (SkeletorView, Template, ExampleModel) ->
+  SkeletorView.extend
     el: "#example-view"
+    template: _.template(Template)
 
     initialize: ->
       console.log "init example view"
-      @template = _.template(Template)
       @model = new ExampleModel({name: "Test name"})
       @render()
 
