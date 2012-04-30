@@ -1,0 +1,9 @@
+body {
+  padding-top: 50px; }
+
+.navbar .nav a {
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear; }

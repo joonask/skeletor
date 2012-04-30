@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Template project</title>
+  <link href="css/ext/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/compiled/styles.css" rel="stylesheet" />
+  <link href="css/ext/bootstrap-responsive.min.css" rel="stylesheet" />
+
   <script type="text/javascript" data-main="js/main.js" src="js/ext/require.js"></script>
 </head>
 <body>
-  <div id="content">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">Skeletor</a>
+        <ul class="nav" id="navigation">
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li><a href="#other">Other</a></li>
+          <li><a href="#handlebars">Handlebars</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="content">
     <div id="example-view" class="page"></div>
     <div id="other-view" class="page"></div>
     <div id="handlebars-view" class="page"></div>
