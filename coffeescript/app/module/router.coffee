@@ -1,13 +1,14 @@
 define [
   'app/module/views/exampleView'
   'app/module/views/exampleOtherView'
-  #'app/module/views/handlebarsView'
-], (ExampleView, OtherExampleView) ->
+  'app/module/views/multiView'
+], (ExampleView, OtherExampleView, MultiView) ->
   Backbone.Router.extend
     views: {}
     routes:
       "": "index",
       "other": "other"
+      "multi": "multi"
       #"handlebars": "handlebars"
 
     initialize: ->
@@ -23,6 +24,11 @@ define [
       if !@views['otherExampleView']?
         @views['otherExampleView'] = new OtherExampleView()
       @views['otherExampleView'].show()
+
+    multi: ->
+      if !@views['multiView']?
+        @views['multiView'] = new MultiView()
+      @views['multiView'].show()
 
     # Handlebars didn't work easily, see https://github.com/SlexAxton/require-handlebars-plugin/
     ###

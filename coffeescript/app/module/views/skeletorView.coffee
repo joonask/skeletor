@@ -20,3 +20,4 @@ define ->
         if href == '#'+Backbone.history.fragment
           $(this).addClass('active')
       )
+
