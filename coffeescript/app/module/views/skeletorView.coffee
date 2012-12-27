@@ -1,4 +1,4 @@
-define [], () ->
+define ->
   Backbone.View.extend
     
     initialize: ->

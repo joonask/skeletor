@@ -1,30 +1,21 @@
-requirejs.config({
+require.config(
+  waitSeconds: 15
   paths:
-    backbone: 'ext/backbone-0.9.1.amd.min'
+    backbone: 'ext/backbone-min'
     bootstrap: 'ext/bootstrap-2.0.2.amd'
-    handlebars: 'ext/handlebars-1.0.0.beta.6'
-    jquery: 'ext/jquery-1.7.2.min'
-    underscore: 'ext/underscore-1.3.1.min'
-})
+    jquery: 'ext/jquery-1.8.3.min'
+    underscore: 'ext/underscore-min'
+    domReady:'domReady'
+    text: 'text'
 
-require [
-  'backbone'
-  'jquery'
-  'underscore'
-  #'handlebars' #enable handlebars if you plan to use it.
-], (Backbone, $, _) -> #, Handlebars) ->
-  window._ = _
-  window.Backbone = Backbone
-  #window.Handlebars = Handlebars
+  shim:
+    'backbone':
+      deps: ['underscore', 'jquery']
+      exports: 'Backbone'
 
-  require [
-    'app/module/router/example'
-    'domReady'
-  ], (ExampleRouter, domReady) ->
-    domReady(->
-      router = new ExampleRouter()
+    'underscore':
+      exports: '_'
+)
 
-      if Backbone.history?
-        Backbone.history.start()
-      @
-    )
+define ['backbone', 'underscore', 'jquery'], ->
+  console.log "Init base configs"

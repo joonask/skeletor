@@ -9,7 +9,7 @@ define [
 
     initialize: ->
       console.log "init example view"
-      @model = new ExampleModel({name: "Test name"})
+      @model = new ExampleModel(name: "Test name")
       @render()
 
     render: ->

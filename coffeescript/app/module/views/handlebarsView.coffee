@@ -1,5 +1,5 @@
 define [
-  "handlebars" # normally load handlebars in main.coffee
+  "ext/handlebars-1.0.0.beta.6"
   "app/module/views/skeletorView"
   "text!app/module/templates/handlebarsTemplate.html"
   "app/module/models/exampleModel"

@@ -14,12 +14,12 @@
     //<!--
     require.config({
     baseUrl: "js/", waitSeconds: 15, paths:{
-            "main": "main-built",
-            "app": "main-app-built"
+            "main": "main",
+            "main-app": "main-app"
         }
     });
     require(["main"], function() {
-        require(["app"], function(){});
+        require(["main-app"], function(){});
     });
     //-->
   </script>
