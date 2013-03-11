@@ -3,7 +3,7 @@ require.config(
   paths:
     backbone: 'ext/backbone-min'
     bootstrap: 'ext/bootstrap-2.0.2.amd'
-    jquery: 'ext/jquery-1.8.3.min'
+    jquery: 'ext/jquery-1.9.1.min'
     underscore: 'ext/underscore-min'
     domReady:'domReady'
     text: 'text'
